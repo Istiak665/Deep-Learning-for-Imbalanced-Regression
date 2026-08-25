@@ -97,6 +97,30 @@ These two effects multiply rather than cancel. MRE does not fix the count imbala
 
 **MRE's loss formula divides by the true value, which sounds like it should emphasize rare (in this case: large) targets — but the resulting gradient is actually inversely proportional to target size, so it pushes hardest on the already-abundant small-wave samples and weakest on the rare large-wave samples, compounding rather than fixing the dataset's imbalance.**
 
+---
+
+## Plain-language recap — what "compounding rather than fixing" means
+
+"Fixing" an imbalance means correcting it. "Compounding" means making it worse — piling more of the same problem on top of itself (same root word as "compound interest," where interest keeps adding on top of interest).
+
+Two separate things are pulling in the *same* direction here, instead of one correcting the other:
+
+- **Problem 1 — the dataset itself is imbalanced (count):** small waves (Calm+Smooth) are ~78% of the data, large waves (Moderate+Rough) are only ~1.6%. So the network already sees small-wave examples far more often than large-wave ones.
+- **Problem 2 — MRE's own gradient is also imbalanced (per-sample push):** every time the network *does* see a sample, MRE's gradient gives a small wave roughly 64x more "learning push" than a large wave with the same-sized error.
+
+"Fixing" would mean Problem 2 works against Problem 1 — e.g., if MRE gave large waves a *bigger* push to make up for seeing them less often. That would cancel the imbalance out.
+
+Instead, Problem 2 works *with* Problem 1:
+
+```
+small wave: seen MORE often  +  pushed HARDER each time  =  becomes even more dominant
+large wave: seen LESS often  +  pushed WEAKER each time   =  becomes even more neglected
+```
+
+The two problems stack instead of canceling — that stacking is what "compounding" means here. Nothing about the imbalance gets corrected; it just gets reinforced from two directions at once.
+
+**Simplest possible version:** instead of helping the rare, large-wave samples catch up, MRE quietly gives the already-common small-wave samples an even bigger head start.
+
 ## References for this note
 
 - Yang, Y., Zha, K., Chen, Y., Wang, H., & Katabi, D. (2021). *Delving into Deep Imbalanced Regression.* ICML 2021. (Defines Label Distribution Smoothing / LDS — addresses count imbalance, not loss-gradient imbalance.)
