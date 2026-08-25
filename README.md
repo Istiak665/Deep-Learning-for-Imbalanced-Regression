@@ -13,6 +13,7 @@ Every note follows the same structure: **concept → math (every symbol defined)
 | MSE Loss | ✅ Done | [`01-loss-functions/loss-functions-mse-huber-mre.md`](01-loss-functions/loss-functions-mse-huber-mre.md#part-c--mse-loss-mean-squared-error) |
 | StratSample / LDS / RankSim / ConR (imbalance mitigation) | 🔜 Planned | [`02-imbalance-mechanisms/`](02-imbalance-mechanisms/) |
 | AdamW optimizer | 🔜 Planned | [`03-optimizers/`](03-optimizers/) |
+| Research insight: Why MRE doesn't actually help rare samples | ✅ Done | [`04-research-insights/why-mre-doesnt-help-rare-samples.md`](04-research-insights/why-mre-doesnt-help-rare-samples.md) |
 
 A Word-document version of the completed notes (same content, formatted for offline reading/printing) is in [`docs/`](docs/).
 
