@@ -11,7 +11,8 @@ Every note follows the same structure: **concept → math (every symbol defined)
 | Huber Loss | ✅ Done | [`01-loss-functions/loss-functions-mse-huber-mre.md`](01-loss-functions/loss-functions-mse-huber-mre.md#part-a--huber-loss) |
 | MRE Loss (epsilon-guarded) | ✅ Done | [`01-loss-functions/loss-functions-mse-huber-mre.md`](01-loss-functions/loss-functions-mse-huber-mre.md#part-b--mre-loss-epsilon-guarded-mean-relative-error) |
 | MSE Loss | ✅ Done | [`01-loss-functions/loss-functions-mse-huber-mre.md`](01-loss-functions/loss-functions-mse-huber-mre.md#part-c--mse-loss-mean-squared-error) |
-| StratSample / LDS / RankSim / ConR (imbalance mitigation) | 🔜 Planned | [`02-imbalance-mechanisms/`](02-imbalance-mechanisms/) |
+| RankSim (imbalance mitigation) | ✅ Done | [`02-imbalance-mechanisms/ranksim.md`](02-imbalance-mechanisms/ranksim.md) |
+| StratSample / LDS / ConR (imbalance mitigation) | 🔜 Planned | [`02-imbalance-mechanisms/`](02-imbalance-mechanisms/) |
 | AdamW optimizer | 🔜 Planned | [`03-optimizers/`](03-optimizers/) |
 | Research insight: Why MRE doesn't actually help rare samples | ✅ Done | [`04-research-insights/why-mre-doesnt-help-rare-samples.md`](04-research-insights/why-mre-doesnt-help-rare-samples.md) |
 
