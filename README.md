@@ -13,7 +13,8 @@ Every note follows the same structure: **concept → math (every symbol defined)
 | MSE Loss | ✅ Done | [`01-loss-functions/loss-functions-mse-huber-mre.md`](01-loss-functions/loss-functions-mse-huber-mre.md#part-c--mse-loss-mean-squared-error) |
 | RankSim (imbalance mitigation) | ✅ Done | [`02-imbalance-mechanisms/ranksim.md`](02-imbalance-mechanisms/ranksim.md) |
 | LDS — Label Distribution Smoothing (imbalance mitigation) | ✅ Done | [`02-imbalance-mechanisms/lds.md`](02-imbalance-mechanisms/lds.md) |
-| StratSample / ConR (imbalance mitigation) | 🔜 Planned | [`02-imbalance-mechanisms/`](02-imbalance-mechanisms/) |
+| ConR — Contrastive Regularizer (imbalance mitigation) | ✅ Done | [`02-imbalance-mechanisms/conr.md`](02-imbalance-mechanisms/conr.md) |
+| StratSample (imbalance mitigation) | 🔜 Planned | [`02-imbalance-mechanisms/`](02-imbalance-mechanisms/) |
 | AdamW optimizer | 🔜 Planned | [`03-optimizers/`](03-optimizers/) |
 | Research insight: Why MRE doesn't actually help rare samples | ✅ Done | [`04-research-insights/why-mre-doesnt-help-rare-samples.md`](04-research-insights/why-mre-doesnt-help-rare-samples.md) |
 
